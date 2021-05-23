@@ -1,0 +1,137 @@
+# Se la libreria spalla non e' installata eseguire sul terminale il comando pip install spalla --user
+
+from spalla import Verifica # importi la libreria
+
+Verifica.firma("Nome Cognome") # firmi la verifica, questa operazione è obbligatoria almeno una volta
+
+Verifica.stampa_esercizi() # stampa sul terminale l'elenco degli esercizi disponibili in questa verifica
+
+Verifica.stampa_voto() # stampa il vostro voto attuale
+
+es = Verifica.inizia_esercizio(1) # restituisce l'esercizio numero 1
+
+print(es) # mostra la consegna dell'esercizio e i dati sui quali lavorare
+
+print(es.dati) # sono i dati forniti per l'esercizio corrente
+
+es.consegna(x) # dove x è il risultato da voi elaborato per l'esercizio corrente
+
+
+#Esempio di come svolgere un esercizio
+
+from spalla import Verifica
+
+def firma():
+    Verifica.firma("nome cognome")
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    def es_1():
+    es = Verifica.inizia_esercizio(1)
+    lista = es.dati
+    numero = lista[0]
+    somma = 0
+    for i in lista:
+        if i == numero:
+            pass
+        elif i > numero:
+            somma = somma + i
+        else:
+            pass
+
+
+    es.consegna(somma)
+#es_1()
+
+def es_2():
+    es = Verifica.inizia_esercizio(2)
+    lista = es.dati
+    somma = 0
+    for i in lista:
+        cont = len(i)
+        if cont > 4:
+            somma = somma + 1
+        else:
+            pass
+    es.consegna(somma)
+#es_2()
+
+def es_3():
+    es = Verifica.inizia_esercizio(3)
+    lista = es.dati
+    lista2 = []
+    for i in lista:
+        resto = i % 2
+        if resto == 0:
+            pass
+        elif resto != 0:
+            if i > 1:
+                lista2.append(i)
+
+    es.consegna(lista2)
+#es_3()
+
+def es_6():
+    es = Verifica.inizia_esercizio(6)
+    num = es.dati
+    num1 = num+1
+    lista2 = []
+    ran = range(0,num1)
+    for nu in ran:
+        lista2.append(nu)
+
+    lista2.sort()
+    lista2.reverse()
+    es.consegna(lista2)
+#es_6()
+
+def es_7():
+    es = Verifica.inizia_esercizio(7)
+    stringa = es.dati
+    lista = stringa.split()
+    lista2 = []
+    for i in lista:
+        indice0 = i[0]
+        if indice0 == "e" or indice0 == "a":
+            lista2.append(i)
+        else:
+            pass
+    es.consegna(lista2)
+#es_7()
